@@ -1,0 +1,22 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: kitchen-db
+  namespace: kitchen
+  annotations:
+    argocd.argoproj.io/sync-options: Prune=false
+spec:
+  instances: 1
+  imageName: ghcr.io/cloudnative-pg/postgresql:18-standard-trixie
+  storage:
+    size: 5Gi
+  bootstrap:
+    initdb:
+      database: kitchen
+      owner: kitchen
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      memory: 1Gi
