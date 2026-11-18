@@ -13,6 +13,7 @@ spec:
       labels:
         app: gotenberg
     spec:
+      enableServiceLinks: false
       securityContext:
         runAsNonRoot: true
         runAsUser: 1001
