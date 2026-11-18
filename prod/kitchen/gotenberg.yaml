@@ -23,6 +23,7 @@ spec:
         - name: gotenberg
           image: gotenberg/gotenberg:8.39.0
           args:
+            - gotenberg
             - --chromium-allow-list=^file:///tmp/.*
             - --chromium-deny-public-ips
             - --chromium-deny-private-ips
