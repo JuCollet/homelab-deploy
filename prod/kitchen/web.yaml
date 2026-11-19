@@ -20,7 +20,7 @@ spec:
           type: RuntimeDefault
       containers:
         - name: web
-          image: ghcr.io/jucollet/kitchen-web:982f6725659ad5b6bb14e6cc3610806e896f3057
+          image: ghcr.io/jucollet/kitchen-web:9198761d0aae81eb63cc24552af725ffda728810
           ports:
             - name: http
               containerPort: 8080
